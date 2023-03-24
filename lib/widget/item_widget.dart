@@ -15,8 +15,10 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorTheme = Theme.of(context).colorScheme;
+
     return Card(
-      color: todoItem.isDone ? Colors.grey : Colors.white,
+      color: todoItem.isDone ? colorTheme.primary : Colors.white,
       margin: const EdgeInsets.only(
         bottom: 10,
       ),
@@ -34,11 +36,21 @@ class ItemWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(todoItem.title),
+                  Text(
+                    todoItem.title,
+                    style: TextStyle(
+                      color: todoItem.isDone ? Colors.white : Colors.black,
+                    ),
+                  ),
                   const SizedBox(
                     height: 10,
                   ),
-                  Text(todoItem.description),
+                  Text(
+                    todoItem.description,
+                    style: TextStyle(
+                      color: todoItem.isDone ? Colors.white : Colors.black,
+                    ),
+                  ),
                 ],
               ),
             ),

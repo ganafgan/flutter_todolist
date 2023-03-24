@@ -8,7 +8,7 @@ class NetworkManager {
   // final Dio _dio = Dio();
 
   final baseUrl =
-      'https://8d9e-2001-448a-304e-2fea-410b-7ddc-f6fc-6e87.ap.ngrok.io';
+      'https://0f9c-2001-448a-304a-16a1-e531-cbe0-16cb-369.ap.ngrok.io';
 
   NetworkManager() {
     _dio = Dio();
